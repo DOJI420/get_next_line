@@ -30,3 +30,39 @@
     write(1, buff, 100);
     return 0;
 }*/
+
+
+//this is a test for me to understand how shit works....
+//  this program prints out what is in a file no matter how big it is...
+/*int main(int argc, char **argv)
+{
+    int fd;
+    char file[1024];
+    ssize_t count;
+    int bytes_read;
+
+    if (argc != 2)
+        return (1);
+    fd = open(argv[1], O_RDONLY);
+    if (fd == -1)
+        return (1);
+    bytes_read = 1;
+    count = 0;
+    while (bytes_read > 0)
+    {
+        bytes_read = read(fd, file, sizeof(file));
+        if (bytes_read == -1)
+        {
+            close(fd);
+            return (1);            
+        }
+        if (bytes_read > 0)
+        {
+            write(1, file, bytes_read);
+            count = count + bytes_read;
+        }
+    }
+    close(fd);
+    printf("\nthe count is :[%zu]", count);
+    return 0;
+}*/
