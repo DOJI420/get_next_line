@@ -37,6 +37,7 @@ char *read_the_file(int fd, char *stash)
         if (bytes_read == -1)
             return (get_free(stash, buffer));
         buffer[bytes_read] = '\0';
+        printf("[%s]\[%s]", stash, buffer); //// <----this is just for debugging xd 
         temp = ft_strjoin(stash, buffer);
         if (temp == NULL)
             return (get_free(stash, buffer));
