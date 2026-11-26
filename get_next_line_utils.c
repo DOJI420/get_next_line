@@ -70,8 +70,10 @@ char *ft_strjoin(const char *s1, const char *s2)
     size_t  index_s1;
     size_t  index_s2;
 
-    if (!s1 || !s2)
+    if (!s2)
         return (NULL);
+    if (!s1)
+        s1 = "";
     joined = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
     if (joined == NULL)
         return (NULL);
