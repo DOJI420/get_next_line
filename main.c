@@ -70,10 +70,21 @@ int main(int argc, char **argv)  //for testing my final project.....!!
     line_count = 1;
     while ((line = get_next_line(fd)) != NULL)
     {
-        printf("[%d]: %s", line_count, line);
+        printf("[%d]: [%s]", line_count, line);
         free(line);
         line_count++;
     }
     close(fd);
     return (0);
 }
+
+
+/*int main()
+{
+    char *s = "asdfghjkl\nqwertyuio";
+    char *res;
+
+    res = ft_strchr(s, 'q');
+    printf("%s\n", res);
+    return 0;
+}*/
